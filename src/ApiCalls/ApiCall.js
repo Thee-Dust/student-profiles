@@ -1,4 +1,4 @@
-export async function getStudents() {
+export default async function getStudents() {
 	try {
 		const response = await fetch('https://api.hatchways.io/assessment/students');
 		const students = apiCheck(response);
