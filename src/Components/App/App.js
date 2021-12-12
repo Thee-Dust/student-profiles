@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import getStudents from '../../ApiCalls/ApiCall';
+import StudentList from '../StudentList/StudentList';
 
 export default function App() {
 	const [ students, setStudents ] = useState([]);
@@ -18,8 +19,8 @@ export default function App() {
 	},[])
 	
 	return (
-		<div>
-			
-		</div>
+		<main>
+			<StudentList students={students} />
+		</main>
 	)
 }
