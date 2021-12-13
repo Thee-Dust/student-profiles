@@ -2,7 +2,7 @@ import React from 'react'
 import StudentCard from '../StudentCard/StudentCard'
 
 export default function StudentList({ students }) {
-
+	
 	const studentCards = students.map(student => {
 		return(
 			<StudentCard
@@ -18,7 +18,7 @@ export default function StudentList({ students }) {
 			/>
 		)
 	})
-
+	
 	return (
 		<div>
 			{studentCards}

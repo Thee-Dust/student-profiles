@@ -11,16 +11,27 @@ export default function App() {
 			setError('')
 			try {
 				const studentList = await getStudents();
-				setStudents(studentList)
+				setStudents(studentList.students)
 			} catch(err) {
 				setError(err.message)
 			}
 		}
+		fetchStudents()
 	},[])
 	
-	return (
-		<main>
-			<StudentList students={students} />
-		</main>
-	)
+
+	if(error){
+		return (
+			<h1>{error}</h1>
+		)
+	}
+	if(students.length) {
+		console.log('here')
+		return (
+			<main>
+				<StudentList students={students} />
+			</main>
+		)
+	}
+	return null
 }
