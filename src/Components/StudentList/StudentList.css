@@ -1,0 +1,11 @@
+.student-list {
+	width: 50%;
+	height: 80%;
+	overflow: scroll;
+	display: flex;
+	flex-direction: column;
+	background-color: #FFF;
+	border: 2px solid #d3d3d3;
+	border-radius: 12px;
+	overflow-x: hidden;
+}

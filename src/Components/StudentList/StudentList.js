@@ -1,5 +1,6 @@
 import React from 'react'
 import StudentCard from '../StudentCard/StudentCard'
+import './StudentList.css'
 
 export default function StudentList({ students }) {
 	
@@ -20,7 +21,7 @@ export default function StudentList({ students }) {
 	})
 	
 	return (
-		<div>
+		<div className='student-list'>
 			{studentCards}
 		</div>
 	)

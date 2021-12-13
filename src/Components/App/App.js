@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import getStudents from '../../ApiCalls/ApiCall';
 import StudentList from '../StudentList/StudentList';
+import './App.css'
 
 export default function App() {
 	const [ students, setStudents ] = useState([]);
@@ -22,11 +23,12 @@ export default function App() {
 
 	if(error){
 		return (
-			<h1>{error}</h1>
+			<main>
+				<h1>{error}</h1>
+			</main>
 		)
 	}
 	if(students.length) {
-		console.log('here')
 		return (
 			<main>
 				<StudentList students={students} />
