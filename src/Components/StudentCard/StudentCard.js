@@ -13,6 +13,12 @@ export default function StudentCard({ id, firstName, lastName, email, studentPic
 		const average = sum / grades.length
 		return average
 	}
+
+	const testScores = grades.map((grade, index) => {
+		return(
+			<li>Test {index + 1}: {grade}%</li>
+		)
+	})
 	
 	return (
 		<div id={id} className='student'>
@@ -34,9 +40,9 @@ export default function StudentCard({ id, firstName, lastName, email, studentPic
 					</ul>
 				</div>
 				{!!visable && 
-					<div className='test'>
+					<div className='tests'>
 						<ul>
-							hello
+							{testScores}
 						</ul>
 					</div>
 				}

@@ -1,9 +1,7 @@
 .student {
 	width: 100%;
-	min-height: 200px;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 	border-bottom: 1px solid #d3d3d3;
 }
 
@@ -11,19 +9,16 @@
 	width: 120px;
 	height: 120px;
 	margin-left: 24px;
+	margin-top: 40px;
 	border: 1px solid grey;
 	border-radius: 100%;
 }
 
 
-.visability-bttn {
-	font-size: 40px;
-	color: #acacac;
-}
-
 .student-about {
 	width: 75%;
 	height: 100%;
+	margin-bottom: 40px;
 }
 
 .student-name {
@@ -40,12 +35,31 @@
 .student-control > button {
 	background: none;
 	border: none;
+	cursor: pointer;
 }
 
-.student-info {
+.visability-bttn {
+	font-size: 40px;
 	color: #acacac;
 }
 
-.student-info > ul > li {
+.visability-bttn:hover {
+	color: #000000;
+}
+
+.student-info,
+.tests {
+	line-height: 28px;
+	color: #555555;
+	font-size: 24px;
+}
+
+.student-info > ul > li,
+.tests > ul > li {
 	list-style-type: none;
 }
+
+.tests {
+	margin-top: 20px;
+}
+
