@@ -4,7 +4,8 @@ import InputForm from '../InputForm/InputForm'
 import './StudentList.css'
 
 export default function StudentList({ students }) {
-	const [ studentSearched, setStudentSearched ] = useState('')
+	const [ studentSearched, setStudentSearched ] = useState('');
+
 	if(!!studentSearched) {
 		const nameMatchedStudents = students.filter(student => student.firstName.toLowerCase().includes(studentSearched.toLocaleLowerCase()) || student.lastName.toLowerCase().includes(studentSearched.toLocaleLowerCase()))
 	
@@ -25,9 +26,11 @@ export default function StudentList({ students }) {
 		})
 
 		return (
-			<div className='student-list'>
+			<div className='student-profiles'>
 				<InputForm changeState={setStudentSearched} inputName={'name'} />
-				{searchedStudentCards}
+				<div className='student-list'>
+					{searchedStudentCards}
+				</div>
 			</div>
 		)
 	}
@@ -50,9 +53,11 @@ export default function StudentList({ students }) {
 	})
 	
 	return (
-		<div className='student-list'>
+		<div className='student-profiles'>
 			<InputForm changeState={setStudentSearched} inputName={'name'} />
-			{studentCards}
+			<div className='student-list'>
+				{studentCards}
+			</div>
 		</div>
 	)
 }

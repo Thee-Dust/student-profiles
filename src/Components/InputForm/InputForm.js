@@ -10,8 +10,8 @@ export default function InputForm({ changeState, inputName }) {
 	}
 
 	return (
-		<form>
-			<input ref={inputRef} placeholder={`Search by ${inputName}`} onChange={inputSearched}></input>
+		<form className='input-form'>
+			<input className='input' ref={inputRef} placeholder={`Search by ${inputName}`} onChange={inputSearched}></input>
 		</form>
 	)
 }
