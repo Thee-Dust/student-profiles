@@ -4,6 +4,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	border-bottom: 1px solid #d3d3d3;
 }
 
 .student > img {
