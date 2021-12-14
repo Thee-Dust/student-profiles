@@ -1,6 +1,6 @@
 .student {
 	width: 100%;
-	height: 200px;
+	min-height: 200px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -15,14 +15,35 @@
 	border-radius: 100%;
 }
 
+
+.visability-bttn {
+	font-size: 40px;
+	color: #acacac;
+}
+
 .student-about {
 	width: 75%;
+	height: 100%;
 }
 
 .student-name {
 	font-size: 52px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+.student-control {
+	display: flex;
+	justify-content: space-between;
+}
+
+.student-control > button {
+	background: none;
+	border: none;
+}
+
+.student-info {
+	color: #acacac;
 }
 
 .student-info > ul > li {

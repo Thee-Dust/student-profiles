@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './StudentCard.css'
 
 export default function StudentCard({ id, firstName, lastName, email, studentPic, company, skill, grades }) {
+	const [ visable, setVisable ] = useState(false)
+
+	const changeVisability = () => {
+		setVisable((prevState) => !prevState)
+	}
 
 	const averageScore = () => {
 		const sum = grades.reduce((total, score) => total + Number(score), 0)
@@ -13,8 +18,12 @@ export default function StudentCard({ id, firstName, lastName, email, studentPic
 		<div id={id} className='student'>
 			<img src={studentPic} alt={`${firstName} ${lastName}`}/>
 			<div className='student-about'>
-				<div>
+				<div className='student-control'>
 					<h1 className='student-name'>{firstName} {lastName}</h1>
+					{!!visable 
+						? <button onClick={changeVisability}><i class="fas fa-minus visability-bttn"></i></button> 
+						: <button onClick={changeVisability}><i className="fas fa-plus visability-bttn"></i></button>
+					}
 				</div>
 				<div className='student-info'>
 					<ul>
@@ -24,6 +33,13 @@ export default function StudentCard({ id, firstName, lastName, email, studentPic
 						<li>Average: {averageScore()}%</li>
 					</ul>
 				</div>
+				{!!visable && 
+					<div className='test'>
+						<ul>
+							hello
+						</ul>
+					</div>
+				}
 			</div>
 		</div>
 	)
