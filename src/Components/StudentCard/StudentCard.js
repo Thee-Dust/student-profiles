@@ -16,7 +16,7 @@ export default function StudentCard({ id, firstName, lastName, email, studentPic
 
 	const testScores = grades.map((grade, index) => {
 		return(
-			<li>Test {index + 1}: {grade}%</li>
+			<li>Test{index + 1}: {grade}%</li>
 		)
 	})
 	
